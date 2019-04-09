@@ -1,7 +1,9 @@
 # Insight Data Engineering Challenge
 
 ## Solution
-I have implemented the solution using Python dictionaries. The solution can be run sequentially (`DeptOrderStat` class) or parallelly (`DeptOrderStatMP` class). The sequential solution reads the input files row by row. Hence, has very limited space complexity, but a very high time complexity. The parallel solution extends the sequential solution. The assumption behind this solution is that the machine has enough free space to store some temporary files (equals the size of the input files). The parallel solution splits the order request file into separate files, process each file using a separate process, and then consolidates the results. For large input files, this reduces the time required to generate the report by a linear factor of m, where m is the number of cpus in the system.
+I have tried to solve the problem using two different approaches. The first approach uses a single threaded process, and is memory efficient, but takes a long time to finish. The second approach uses multiple processes running in parallel, and is time efficient, but assumes that the system has enough free space in secondary storage. Both of the approaches reads the data in row by row to make sure the solution scales for large data, and use Python dictionaries as the underlying data structure to store relationship maps and resulting statistics for fast access. The first approach is implemented in the `DeptOrderStat` class. The second  approach is implemneted in the `DeptOrderStatMP` class, which extends the `DeptOrderStat` class. 
+
+The assumption behind the parallel solution is that the machine has enough free space to store some temporary files (equals the size of the input files). The parallel solution splits the order request file into separate files, process each file using a separate process, and then consolidates the results. For large input files, this reduces the time required to generate the report by a linear factor of m, where m is the number of cpus in the system.
 
 Interface for both the classes are same. To run the parallel solution just pass `--mp` after the script name.
 
