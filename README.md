@@ -11,6 +11,12 @@ To run the parallel solution use:
 To run the sequential solution use:
 `python3 report_generator.py`
 
+To pass product file, order request file, and output file manually use the following format:
+`python3 report_generator --orderfile <order_file_path> --productfile <product_file_path> --output <output_file_path>`
+
+To pass the name of the columns in CSV file identifying the product-id, department-id and reorder information use:
+`python3 report_generator --productcol <column_name> --deptcol <column_name> --reordercol <column_name>`
+
 ## Dependencies
 My solution uses one external Python module (`filesplit`) for file splitting, in the parallel solution. It can be installed using:
 
