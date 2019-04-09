@@ -167,7 +167,7 @@ class DeptOrderStatMP(DeptOrderStat):
         processes. Combines the results into a single dictionary for each
         type of data; namely, order count and reorder count.
 
-        :return: Returns True if splitting is successful
+        :return: Returns True if operation is successful
         :rtype: bool
         '''
         if self.input_file_splitter(self.order_file, self.temp_dir):
