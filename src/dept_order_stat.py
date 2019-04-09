@@ -111,8 +111,8 @@ class DeptOrderStat(object):
             for key in keys:
                 csvwriter.writerow([key, self.order_count_dict[key],
                                     self.reorder_count_dict[key],
-                                    round(self.reorder_count_dict[key]
-                                          / self.order_count_dict[key], 2)])
+                                    "%.2f" % round(self.reorder_count_dict[key]
+                                                   / self.order_count_dict[key], 2)])
         return True
 
 
