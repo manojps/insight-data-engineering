@@ -34,7 +34,7 @@ I have refrained from the implementing a solution with high-level of abstraction
 I have implemented one test case to check that solution works 'properly' with missing or invalid data. 
 
 ## Bugs
-I have omiited implementing a range check for data validity of the reordered column to speed up the running time. Hence, if the input data is any number other than 0 or 1, it will still pass through. This feature can be added with one simple data validation check condition, if required.
+I have omitted implementing a range check for data validity of the reordered column to speed up the running time. Hence, if the input data is any number other than 0 or 1, it will still pass through. This feature can be added with one simple data validation check condition, if required.
 
 
 
